@@ -1,2 +1,2 @@
 # Ultrasound denoising
-Classical denoising method
+Classical denoising methods
