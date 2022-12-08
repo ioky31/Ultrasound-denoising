@@ -29,23 +29,22 @@ noise = imresize(noise, [128, 128]);
 % NLM
 % denoised = imnlmfilt(noise);
 % FANS
-% denoised = FANS(noise,97);
+% denoised4 = FANS(noise,97);
 % denoised = FANS(noise,72);
-% denoised = FANS(noise,13);
+denoised = FANS(noise,14);
 % LF
 % denoised = LF(noise,10, 5, 5);
 % res = im - noise;
 % var(res(:))
 % WNNM
-% denoised = my_WNNM(noise,1.6);
+% denoised5 = my_WNNM(noise,1.6);
 % denoised = my_WNNM(noise,2.7);
-% denoised = my_WNNM(noise,8.5);
 % no_log
-% denoised = imread("D:\swimir_result\no_log\sigma0.5\test_images\kidney_cut.bmp");
+% denoised = imread("D:\swimir_result\no_log\sigma0.1\test_images\kidney_cut.png");
 % denoised = imresize(denoised, [128,128]);
 % log
-denoised = imread("D:\swimir_result\log\sigma0.1\test_images\kidney_cut.bmp");
-denoised = imresize(denoised, [128,128]);
+% denoised = imread("D:\swimir_result\log\sigma0.1\test_images\kidney_cut.bmp");
+% denoised = imresize(denoised, [128,128]);
 %% imshow
 % % my_imshow(clean, noise, denoised)
 [ssimval,peaksnr,snr,MSE,epi] = indicator(clean, denoised);
